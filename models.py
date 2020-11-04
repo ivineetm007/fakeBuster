@@ -5,16 +5,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 from select_backbone import select_resnet
 import math
-
-# class FakeDetector(object):
-#     def __init__(self,winLength=30,overlap=10):
-#         self.winLength=winLength
-#         self.overlap = overlap
-#
-#     def detect(self,faceChunk):
-#         time.sleep(3)
-#         return np.random.uniform(low=0, high=1)
-
 class FaceDetector(object):
     def __init__(self, facedet_scale=0.25, crop_scale=0.40, confidence=0.9, track_iou_thres=0.6, device='cpu'):
         self.facedet_scale = facedet_scale
