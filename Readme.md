@@ -13,7 +13,7 @@ conda install -c conda-forge opencv python-mss
 pip install --no-cache-dir torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 # Run
-This tool requires model weights for face detector and deepfake detector which can be downloaded from this link. \
+This tool requires model weights for face detector and deepfake detector which can be downloaded from the [drive link](https://drive.google.com/drive/folders/1Vej_l-g6wvwaaAcigxuf4l8-IHxNWk75?usp=sharing)  \
 Configure parameters in `config.py`
 1. Update the path parameters `checkpointpath` and `weights_path`.
 2. Configure model device placement- `fake_det_device` and `fake_det_device`
