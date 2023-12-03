@@ -1,10 +1,13 @@
-def bb_intersection_over_union(boxA, boxB):
-    xA = max(boxA[0], boxB[0])
-    yA = max(boxA[1], boxB[1])
-    xB = min(boxA[2], boxB[2])
-    yB = min(boxA[3], boxB[3])
-    interArea = max(0, xB - xA + 1) * max(0, yB - yA + 1)
-    boxAArea = (boxA[2] - boxA[0] + 1) * (boxA[3] - boxA[1] + 1)
-    boxBArea = (boxB[2] - boxB[0] + 1) * (boxB[3] - boxB[1] + 1)
-    iou = interArea / float(boxAArea + boxBArea - interArea)
-    return iou
+def check_inside_box(large_box,small_box):
+    '''
+
+    :param large_box: [left, top, right, bottom]
+    :param small_box: [left, top, right, bottom]
+    :return:
+    '''
+    left_l, top_l, right_l, bottom_l= large_box
+    left_s, top_s, right_s, bottom_s = small_box
+    if (left_s >= left_l) and (right_s <= right_l) and (top_s >= top_l and bottom_s <= bottom_l):
+        return True
+    else:
+        return False

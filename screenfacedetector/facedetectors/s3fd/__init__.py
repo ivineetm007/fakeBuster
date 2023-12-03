@@ -6,20 +6,20 @@ from torchvision import transforms
 from .nets import S3FDNet
 from .box_utils import nms_
 
-PATH_WEIGHT = './detectors/s3fd/weights/sfd_face.pth'
+# PATH_WEIGHT = './screenfacedetector/facedetectors/s3fd/weights/sfd_face.pth'
 img_mean = np.array([104., 117., 123.])[:, np.newaxis, np.newaxis].astype('float32')
 
 
 class S3FD():
 
-    def __init__(self, device='cuda'):
+    def __init__(self, weights_path, device='cuda'):
 
         tstamp = time.time()
         self.device = device
 
         print('[S3FD] loading with', self.device)
         self.net = S3FDNet(device=self.device).to(self.device)
-        state_dict = torch.load(PATH_WEIGHT, map_location=self.device)
+        state_dict = torch.load(weights_path, map_location=self.device)
         self.net.load_state_dict(state_dict)
         self.net.eval()
         print('[S3FD] finished loading (%.4f sec)' % (time.time() - tstamp))

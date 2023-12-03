@@ -11,15 +11,16 @@ class MSSscreenCaptue(object):
         self.height = self.monitor['height']
 
 
-    def getMonitor(self, index=1):
+    def getMonitor(self, index=0):
         return self.sct.monitors[index]
 
     def processScreenshot(self, screenshot):
-        img = np.array(screenshot)
-        imgrgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        img = np.array(screenshot)#uint8
+        imgrgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)#uint8
         return imgrgb
 
     def shot(self, monitor):
+        # print(monitor)
         return self.sct.grab(monitor)
 
     def fullScreenshot(self):

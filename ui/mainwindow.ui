@@ -6,12 +6,25 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>600</width>
+    <height>300</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+    <weight>50</weight>
+    <bold>false</bold>
+   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>128</width>
+    <height>128</height>
+   </size>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -31,16 +44,21 @@
        </widget>
       </item>
       <item row="4" column="1">
-       <widget class="QPushButton" name="startRecordButton">
+       <widget class="QPushButton" name="startButton">
         <property name="font">
          <font>
-          <pointsize>8</pointsize>
+          <family>Verdana</family>
+          <pointsize>11</pointsize>
           <weight>75</weight>
+          <italic>false</italic>
           <bold>true</bold>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
         <property name="text">
-         <string>StartRecord</string>
+         <string>Find Imposter</string>
         </property>
        </widget>
       </item>
@@ -48,13 +66,19 @@
        <widget class="QPushButton" name="scanButton">
         <property name="font">
          <font>
-          <pointsize>8</pointsize>
+          <family>Verdana</family>
+          <pointsize>12</pointsize>
           <weight>75</weight>
+          <italic>false</italic>
           <bold>true</bold>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">
+</string>
+        </property>
         <property name="text">
-         <string>Scan</string>
+         <string>Detect Faces</string>
         </property>
        </widget>
       </item>
@@ -64,85 +88,40 @@
        </widget>
       </item>
       <item row="5" column="1">
-       <widget class="QPushButton" name="stopDetectButton">
+       <widget class="QPushButton" name="statsButton">
         <property name="font">
          <font>
-          <pointsize>8</pointsize>
+          <family>Verdana</family>
+          <pointsize>11</pointsize>
           <weight>75</weight>
+          <italic>false</italic>
           <bold>true</bold>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
         <property name="text">
-         <string>StopDetect</string>
+         <string>View Summary</string>
         </property>
        </widget>
       </item>
       <item row="5" column="0">
-       <widget class="QPushButton" name="stopRecordButton">
+       <widget class="QPushButton" name="stopButton">
         <property name="font">
          <font>
-          <pointsize>8</pointsize>
+          <family>Verdana</family>
+          <pointsize>12</pointsize>
           <weight>75</weight>
+          <italic>false</italic>
           <bold>true</bold>
          </font>
         </property>
-        <property name="text">
-         <string>StopRecord</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_3"/>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLabel" name="prcossedLabel">
-        <property name="font">
-         <font>
-          <pointsize>10</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
+        <property name="styleSheet">
+         <string notr="true"/>
         </property>
         <property name="text">
-         <string>Processed</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="processedView">
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>0</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="captureLabel">
-        <property name="font">
-         <font>
-          <pointsize>10</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Captured</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="capturedView">
-        <property name="text">
-         <string>0</string>
+         <string>Stop</string>
         </property>
        </widget>
       </item>
@@ -155,8 +134,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>26</height>
+     <width>600</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>

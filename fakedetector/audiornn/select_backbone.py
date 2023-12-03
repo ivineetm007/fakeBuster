@@ -1,4 +1,4 @@
-from resnet_2d3d import * 
+from .resnet_2d3d import *
 
 def select_resnet(network, track_running_stats=True,):
     param = {'feature_size': 1024}
